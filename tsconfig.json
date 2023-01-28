@@ -11,6 +11,7 @@
     "allowJs": true,
     "moduleResolution": "Node",
     "declaration": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "jsx": "react"
   }
 }

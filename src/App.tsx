@@ -1,17 +1,21 @@
 import { memo } from "react";
 import styled from "styled-components";
 import GlobalStyles from "./globalStyles";
+import Header from "./component/header/Header";
+import Body from "./component/body/Body";
 
-const Title = styled.h1`
-  color: #666;
+const HeaderWrapper = styled.div`
+  width: 100%;
+  height: 95px;
 `;
 
 function App() {
   return (
     <>
-      <GlobalStyles />
-      <Title>Welcome</Title>
-      <p>Use this as a starting point to develop your own application :-)</p>
+        <GlobalStyles />
+        <Header />
+        <HeaderWrapper />
+        <Body />
     </>
   );
 }
