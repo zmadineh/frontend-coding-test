@@ -6,6 +6,23 @@ export const Button = styled.button`
   font-size: 18px;
   margin: 10px;
   padding: 15px 20px;
-  border: 2px solid #4eb151;
-  border-radius: 5px;    
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    color: ${props => props.theme.colors.border};
+  }
+`;
+
+export const BorderedButton = styled(Button)`
+  border: 2px solid ${props => props.theme.colors.border};
+  border-radius: 5px;
+`;
+
+export const UnderLinedButton = styled(Button)`
+  border-bottom: 1px solid ${props => props.theme.colors.border};
+`;
+
+export const BorderLessButton = styled(Button)`
+  border: none;
 `;

@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import {devices} from "./devices.style";
 
-import {headerHeight} from "../data/styleConstant.data";
+import { headerHeight } from "../data/styleConstant.data";
 
 export const HeaderContainer = styled.div`
   height: ${headerHeight}px;
@@ -21,13 +20,9 @@ export const HeaderContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+
   font-weight: bold;
   font-size: 18px;
   background-color: ${props => props.theme.colors.main};
   color: ${props => props.theme.colors.secondary};
-  
-  @media ${devices.laptop} {
-    justify-content: center;
-  }
 `;
