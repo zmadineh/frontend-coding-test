@@ -1,19 +1,19 @@
 import { DefaultTheme } from 'styled-components';
 
-const theme: DefaultTheme = {
-    colors: {
-        dark: {
-            main: '#333333',
-            secondary: '#ffffff',
-            border: '#4eb151',
-        },
-
-        light: {
+export const lightTheme: DefaultTheme = {
+    colors:
+        {
             main: '#ffffff',
             secondary: '#333333',
             border: '#4eb151',
         },
-    },
 };
 
-export { theme };
+export const darkTheme: DefaultTheme = {
+    colors:
+        {
+            main: '#333333',
+            secondary: '#ffffff',
+            border: '#4eb151',
+        },
+};

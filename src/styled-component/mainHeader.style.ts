@@ -12,7 +12,7 @@ export const HeaderContainer = styled.div`
 
 export const HeaderContent = styled.div`
   padding: 0 20px;
-  border-bottom: 3px solid #4eb151;
+  border-bottom: 3px solid ${props => props.theme.colors.border};
   overflow: hidden;
   position: sticky;
   top: 0;
@@ -24,8 +24,8 @@ export const HeaderContent = styled.div`
   
   font-weight: bold;
   font-size: 18px;
-  background-color: #333333;
-  color: #FFFFFF;
+  background-color: ${props => props.theme.colors.main};
+  color: ${props => props.theme.colors.secondary};
   
   @media ${devices.laptop} {
     justify-content: center;

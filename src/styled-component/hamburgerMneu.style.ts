@@ -10,7 +10,7 @@ export const Bar = styled.span`
     width: 20px;
     height: 2px;
     margin: 4px 0;
-    background-color: #ffffff;
+    background-color: ${props => props.theme.colors.secondary};
     border-radius: 20%;
 `;
 

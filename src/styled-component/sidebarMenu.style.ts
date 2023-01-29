@@ -16,7 +16,8 @@ export const Sidebar = styled.div<SidebarPropsType>`
   flex-direction: column;
   gap: 10px;
   padding: 20px;
-  background-color: #333333;
+  background-color: ${props => props.theme.colors.main};
+  border-right: 3px solid ${props => props.theme.colors.border};
   transition: 0.4s;
   overflow: hidden;
 

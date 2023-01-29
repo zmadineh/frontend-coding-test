@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
-  background: #333333;
-  color: #ffffff;
+  background: ${props => props.theme.colors.main};
+  color: ${props => props.theme.colors.secondary};
   font-size: 18px;
   margin: 10px;
   padding: 15px 20px;
