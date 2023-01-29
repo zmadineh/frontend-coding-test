@@ -1,9 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-  body {
+  * {
     margin: 0;
     padding: 0;
+  } 
+  
+  body {
     box-sizing: border-box;
     //padding: 1rem;
     //background: palegoldenrod;

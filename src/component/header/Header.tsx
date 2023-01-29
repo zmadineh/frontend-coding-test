@@ -1,40 +1,30 @@
 import type {ReactElement} from "react";
-import styled from "styled-components";
+import {useState} from "react";
 
-const Container = styled.div`
-  height: 60px;
-  width: 100%;
-  padding: 10px;
-  position: relative;
-`;
+import {Hamburger, Bar} from "../../styled-component/hamburgerMneu.style";
+import {HeaderContainer, HeaderContent} from "../../styled-component/mainHeader.style";
 
-const HeaderContent = styled.div`
-  background-color: #333333;
-  font-weight: bold;
-  color: #FFFFFF;
-  padding: 10px;
-  border-bottom: 3px solid #4eb151;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: inherit;
-  display: flex;
-  align-items: center;
-`;
 
 interface HeaderPropsType {
     counter: number,
 }
 
 function Header({counter} : HeaderPropsType) : ReactElement {
+
+    const [openMenu, setOpenMenu] = useState(false);
+    const handleClick = () => setOpenMenu(!openMenu);
+
     return (
-        <Container>
+        <HeaderContainer>
             <HeaderContent>
-                counter: {counter}
+                <h3> counter: {counter} </h3>
+                <Hamburger onClick={handleClick} clicked={openMenu}>
+                    <Bar></Bar>
+                    <Bar></Bar>
+                    <Bar></Bar>
+                </Hamburger>
             </HeaderContent>
-        </Container>
+        </HeaderContainer>
     );
 }
 
