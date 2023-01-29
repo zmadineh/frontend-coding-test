@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {devices} from "./devices.style";
 
 interface HamburgerPropsType {
     clicked: boolean
@@ -23,11 +24,15 @@ export const Hamburger = styled.div<HamburgerPropsType>`
 
     & ${Bar}:nth-child(1) {
        transform: ${(props) => (props.clicked && `translateY(5px) rotate(135deg)`)};
-       transition-duration: ${(props) => (props.clicked && `0.2s`)};
+       transition-duration: ${(props) => (props.clicked && `0.4s`)};
     }
 
     & ${Bar}:nth-child(3) {
       transform: ${(props) => (props.clicked && `translateY(-7px) rotate(45deg)`)};
-      transition-duration: ${(props) => (props.clicked && `0.2s`)};
+      transition-duration: ${(props) => (props.clicked && `0.4s`)};
     }
+
+  @media ${devices.laptop} {
+    display: none;
+  }
 `;

@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const MainContent = styled.div`
   width: 100%;
-  padding: 1rem;
+  padding: 10px;
   background-color: #ffffff;
   display: flex;
   justify-content: center;
