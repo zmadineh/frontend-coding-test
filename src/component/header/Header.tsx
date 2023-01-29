@@ -14,12 +14,10 @@ function Header({counter} : HeaderPropsType) : ReactElement {
 
     const [openMenu, setOpenMenu] = useState(false);
 
-    const handleMenuClick = () => setOpenMenu(!openMenu);
-
     return (
         <HeaderContainer>
             <HeaderContent>
-                <Hamburger onClick={handleMenuClick} clicked={openMenu}>
+                <Hamburger onClick={() => setOpenMenu(!openMenu)} clicked={openMenu}>
                     <Bar></Bar>
                     <Bar></Bar>
                     <Bar></Bar>
