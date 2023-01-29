@@ -5,6 +5,8 @@ import {useEffect, useState} from "react";
 import {MainContent} from "../../styled-component/mainContent.style";
 import {Button} from "../../styled-component/button.style";
 
+import {counterInitialValue} from "../../data/counterInitialValue.data";
+
 
 interface BodyPropsType {
     counter: number,
@@ -28,7 +30,7 @@ function Body ({counter, setCounter} : BodyPropsType) : ReactElement {
     }, [isActive, counter, setCounter]);
     
     const startCounter = () => {
-        setCounter(15)
+        setCounter(counterInitialValue)
         setIsActive(true)
     }
 

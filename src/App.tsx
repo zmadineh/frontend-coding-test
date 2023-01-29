@@ -1,11 +1,13 @@
 import {memo, useState} from "react";
-// import styled from "styled-components";
-import GlobalStyles from "./globalStyles";
 import Header from "./component/header/Header";
 import Body from "./component/body/Body";
 
+import GlobalStyles from "./globalStyles";
+
+import {counterInitialValue} from "./data/counterInitialValue.data";
+
 function App() {
-    const [counter, setCounter] = useState(15);
+    const [counter, setCounter] = useState(counterInitialValue);
 
     return (
         <>

@@ -24,7 +24,7 @@ function Header({counter} : HeaderPropsType) : ReactElement {
                     <Bar></Bar>
                     <Bar></Bar>
                 </Hamburger>
-                <h3> counter : {counter} </h3>
+                <h3> Counter : {counter} </h3>
                 <Sidebar open={openMenu}>
                     <SidebarList>
                         <li>first</li>
