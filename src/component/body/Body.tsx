@@ -1,25 +1,10 @@
 import type {ReactElement} from "react";
 import type React from "react";
 import {useEffect, useState} from "react";
-import styled from "styled-components";
 
-const MainContent = styled.div`
-  width: 100%;
-  padding: 10px;
-  background-color: #ffffff;
-  display: flex;
-  justify-content: center;
-`;
+import {MainContent} from "../../styled-component/mainContent.style";
+import {Button} from "../../styled-component/button.style";
 
-const Button = styled.button`
-  background: #ffffff;
-  color: #333333;
-  font-size: 1rem;
-  margin: 10px;
-  padding: 10px 15px;
-  border: 2px solid #4eb151;
-  border-radius: 5px;    
-`;
 
 interface BodyPropsType {
     counter: number,
@@ -39,9 +24,7 @@ function Body ({counter, setCounter} : BodyPropsType) : ReactElement {
             }, 1000);
         else setIsActive(false)
 
-        return () => {
-            clearInterval(interval);
-        };
+        return () => clearInterval(interval);
     }, [isActive, counter, setCounter]);
     
     const startCounter = () => {

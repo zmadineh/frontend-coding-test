@@ -13,6 +13,7 @@ interface HeaderPropsType {
 function Header({counter} : HeaderPropsType) : ReactElement {
 
     const [openMenu, setOpenMenu] = useState(false);
+
     const handleMenuClick = () => setOpenMenu(!openMenu);
 
     return (
@@ -23,7 +24,7 @@ function Header({counter} : HeaderPropsType) : ReactElement {
                     <Bar></Bar>
                     <Bar></Bar>
                 </Hamburger>
-                <h3> counter: {counter} </h3>
+                <h3> counter : {counter} </h3>
                 <Sidebar open={openMenu}>
                     <SidebarList>
                         <li>first</li>
