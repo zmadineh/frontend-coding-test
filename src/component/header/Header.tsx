@@ -1,4 +1,4 @@
-import React from "react";
+import type {ReactElement} from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -7,7 +7,8 @@ const Container = styled.div`
   padding: 10px;
   position: relative;
 `;
-const Toolbar = styled.div`
+
+const HeaderContent = styled.div`
   background-color: #333333;
   font-weight: bold;
   color: #FFFFFF;
@@ -23,12 +24,16 @@ const Toolbar = styled.div`
   align-items: center;
 `;
 
-function Header() {
+interface HeaderPropsType {
+    counter: number,
+}
+
+function Header({counter} : HeaderPropsType) : ReactElement {
     return (
         <Container>
-            <Toolbar>
-                toolbar
-            </Toolbar>
+            <HeaderContent>
+                counter: {counter}
+            </HeaderContent>
         </Container>
     );
 }
